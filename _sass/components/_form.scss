@@ -1,0 +1,84 @@
+form {
+  background-color: $brand-light;
+  padding: $base-spacing;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 2px $base-spacing $base-spacing*2 0 rgba(#000, .1);
+  border-radius: $base-spacing;
+  position: relative;
+
+  * {
+    vertical-align: top;
+  }
+  [type=submit] {
+    // position: absolute;
+    float: right;
+    border-radius: $base-spacing/2;
+  }
+  span {
+    padding: $base-spacing $base-spacing 0;
+    font-size: 24px;
+    line-height: 1em;
+  }
+}
+.alloy-input-group {
+  position: relative;
+
+  label {
+    line-height: 1em;
+    position: absolute;
+    left: 0;
+    top: $base-spacing;
+    opacity: .4;
+
+    transform-origin: left;
+    transition: transform;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+  }
+
+  #alloyEmail {
+    width: 100%;
+
+    &:focus + [for="alloyEmail"] {
+      transform: translateY(-1.4rem) scale(.5);
+    }
+  }
+}
+form {
+  display: table;
+
+  > * {
+  	display: table-cell;
+  }
+
+  .alloy-input-group {
+    width: 100%;
+  }
+}
+.btn,
+input {
+  font-size: 1rem;
+  line-height: 1em;
+  border: 0;
+
+}
+[type=submit],
+.btn {
+  background-color: $brand-primary;
+  color: $brand-light;
+  border-radius: $base-spacing;
+  padding: $base-spacing $base-spacing*2;
+
+}
+
+input {
+  padding: $base-spacing 0;
+  border-bottom: 2px solid transparent;
+
+  &:focus {
+    outline: none;
+    border-color: rgba(#000, .4);
+  }
+}

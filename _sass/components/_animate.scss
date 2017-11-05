@@ -1,0 +1,88 @@
+body {
+  .animated {
+    &:nth-child(1){
+
+    }
+    &:nth-child(2){
+
+    }
+  }
+}
+.animated {
+  animation-name: stretch;
+  animation-duration: .6s;
+  animation-delay: 0s;
+  animation-timing-function: cubic-bezier(0.645, 0.045, 0.355, 1.000); // find more fancy onece over at https://matthewlein.com/tools/ceaser ease, ease-in, ease-out, ease-in-out, linear, step-start, step-end;
+  animation-direction: alternate; // normal, reverse, alternate, alternate-reverse
+  animation-iteration-count: 1; // infinite or number
+  animation-fill-mode: forwards; // none, forwards, backwards, both
+  animation-play-state: running; // running, paused
+}
+.second {
+  animation-delay: .75s;
+}
+$animatedDelayList: '.first', '.second', '.third', '.fourth', '.fifth', '.sixth', '.seventh', '.eighth', '.ninth', '.tenth', '.eleventh', '.twelfth';
+
+@each $animatedDelay in $animatedDelayList {
+  $i: index($animatedDelayList, $animatedDelay);
+  #{$animatedDelay} {
+     animation-delay: $i * .25s;
+  }
+}
+
+.fadeInUp {
+  animation-name: fadeInUp;
+  opacity: 0;
+  transform: translateY(100px);
+}
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+.fadeInLeft {
+  animation-name: fadeInLeft;
+  opacity: 0;
+  transform: translateX(-200px);
+}
+@keyframes fadeInLeft {
+  0% {
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+.skewIn {
+  -webkit-backface-visibility: hidden; // Fix jagged lines in Chrome
+  animation-name: skewIn;
+  animation-timing-function: cubic-bezier(.75,-0.5,0,1.75);
+  opacity: 1;
+  transform: skewY(0deg);
+}
+@keyframes skewIn {
+  0% {
+    opacity: 1;
+    transform: skewY(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: skewY(-3deg);
+  }
+}
+
+// Parallax effect
+.parallaxDown {
+  transform: translateY(0);
+  transition: transform;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+}
+// END Parallax effect

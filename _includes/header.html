@@ -1,0 +1,17 @@
+<header class="site-header" role="banner">
+  <div class="container padding--small">
+    <div class="row">
+      <div class="col-12">
+        <div class="alloy-navbar">
+          <a class="site-title animated fadeInLeft seventh" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
+          <nav class="animated fadeInLeft eighth">
+            {% assign items = site.sections | sort: 'order' %}
+            {% for item in items %}
+            <a href="#{{ item.title | slugify }}" class="alloy-menu-item alloy-menu-item-{{ item.title | slugify }}">{{ item.title }}</a>
+            {% endfor %}
+          </nav>
+        </div>
+      </div>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,46 @@
+.alloy-navbar {
+  opacity: .6;
+  transition: opacity;
+  transition-duration: .3s;
+  transition-timing-function: ease;
+
+  &:hover {
+    opacity: 1;
+  }
+  a {
+    color: $brand-dark;
+  }
+  .site-title {
+    font-weight: 700;
+  }
+
+  nav {
+    .alloy-menu-item {
+      font-size: .8rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      // padding: $base-spacing;
+      display: inline-block;
+      margin-right: $base-spacing;
+
+      &:last-of-type {
+        margin-right: 0;
+      }
+    }
+  }
+}
+
+// Fake space-between
+.alloy-navbar {
+  text-align: justify;
+
+  &:after {
+    content: '';
+    display: inline-block;
+    width: 100%;
+  }
+  > * {
+    display: inline-block;
+  }
+}
+// END Fake space-between

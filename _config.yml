@@ -1,0 +1,49 @@
+# Welcome to Jekyll!
+#
+# This config file is meant for settings that affect your whole blog, values
+# which you are expected to set up once and rarely edit after that. If you find
+# yourself editing this file very often, consider using Jekyll's data files
+# feature for the data you need to update frequently.
+#
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
+
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: Work smarter, not harder
+description: > # this means to ignore newlines until "baseurl:"
+  <p>Technologie is er er voor om voor je te werken, niet tegen je. Er zijn zo veel reden waardoor je gestrest kan raken in je leven, maar technologie zou er daar niet één van moeten zijn en als dit wel het geval is moet je het anders inzetten.</p>
+
+  <p>Ken je die pop-up die je op je telefoon krijgt wanneer je voor het eerst een app installeert “Mag deze app je push notificaties sturen”, zeg een s een keer nee. Met deze en nog een paar kleine aanpassingen in je workflow, kun je de tools die dagelijks je aandacht vragen inzetten om voor je te werken, zodat het werken en gebruiken voorwerp word e niet meer een stoorzender.</p>
+tagline: Laat technologie voor je werken, niet tegen je.
+
+author: Mitchel van Eijgen
+email: mvaneijgen@gmail.com
+phone: 06 38 63 27 35
+baseurl: "work-smarter-not-harder" # the subpath of your site, e.g. /blog
+url: "https://mvaneijgen.nl" # the base hostname & protocol for your site, e.g. http://example.com
+twitter_username: mvaneijgen
+github_username:  mvaneijgen
+
+# Build settings
+markdown: kramdown
+plugins:
+  - jekyll-feed
+
+collections:
+- sections
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+#   - Gemfile
+#   - Gemfile.lock
+#   - node_modules
+#   - vendor/bundle/
+#   - vendor/cache/
+#   - vendor/gems/
+#   - vendor/ruby/
