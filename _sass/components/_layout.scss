@@ -1,6 +1,9 @@
 body {
   margin: 0;
 }
+section {
+  position: relative;
+}
 @include media-breakpoint-up(md) {
   section {
     position: relative;
