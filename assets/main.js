@@ -1,14 +1,17 @@
-const parallaxDownElements = document.querySelector('.parallaxDown');
+const parallaxDownElements = document.querySelectorAll('.parallaxDown');
 
-// console.log(parallaxDownElements.offsetTop);
+window.addEventListener('scroll', function(e) {
+  console.log(window.scrollY);
+  parallexDownFun(window.scrollY)
+})
 
-// window.addEventListener('scroll', function(e) {
-//   // console.log(window.scrollY);
-//   parallexDownFun(parallaxDownElements, window.scrollY)
-// })
-// function parallexDownFun(elementToScroll, scrollpos) {
-//   elementToScroll.style.transform = 'translateY(-'+scrollpos+'px)';
-// }
+function parallexDownFun(scrollpos) {
+  Array.from(parallaxDownElements.forEach(fun‌​ction(e) {
+    var parallaxDownElementTop = parallaxDownElement.getBoundingClientRect().top;
+    var calculaedPosTop = parallaxDownElementTop - scrollpos;
+    parallaxDownElement.style.transform = 'translateY(-'+calculaedPosTop+'px)';
+  });
+}
 
 // Replace emoji of form
 const alloySignup = document.querySelector('#alloySignup');
