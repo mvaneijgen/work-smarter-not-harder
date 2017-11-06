@@ -6,7 +6,7 @@ section {
 }
 @include media-breakpoint-up(md) {
   section {
-    position: relative;
+
     &.alloy-large,
     &:first-of-type {
       min-height: 50vh;

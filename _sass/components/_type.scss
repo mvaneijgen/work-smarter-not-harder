@@ -24,13 +24,14 @@ h2 {
 }
 a {
   text-decoration: none;
-  color: $brand-primary;
+  color: $brand-dark;
+  border-bottom: 2px solid;
   &:visited {
-
+    border-color: rgba($brand-dark, .4);
   }
   &:active,
   &:hover {
-    color: $brand-secondary;
+    border-color: $brand-primary;
   }
 
 }
