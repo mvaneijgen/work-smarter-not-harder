@@ -7,6 +7,8 @@ body {
   color: $brand-dark;
   font-size: 22px;
   line-height: 1.6em;
+  -webkit-font-smoothing: antialiased;
+
 }
 h1, h2, h3, h4, h5, h6, p {
   margin-top: 0;
@@ -33,5 +35,13 @@ a {
   &:hover {
     border-color: $brand-primary;
   }
-
+  &.a-highlight {
+    color: $brand-primary;
+    border-color: inherit;
+  }
+}
+.alloy-social {
+  a {
+    border-bottom: 0;
+  }
 }

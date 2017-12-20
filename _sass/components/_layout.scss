@@ -93,11 +93,42 @@ section {
 }
 
 .alloy-cards {
+
   .inner {
-    background-color: $brand-grey;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
     min-height: 300px;
+    border: 2px solid $brand-grey;
+
     border-radius: $base-spacing;
     margin-bottom: $base-spacing*2;
+
+    img {
+      // display: block;
+      max-width: 200px;
+    }
+    span {
+      display: block;
+    }
+  }
+  &:last-of-type {
+    .inner {
+      padding: $base-spacing;
+      background-color: $brand-primary;
+      border-color: $brand-primary;
+      color: $brand-light;
+      text-align: left !important;
+    }
+  }
+  @include media-breakpoint-up(md) {
+    &:last-of-type {
+      .inner {
+        padding: $base-spacing*2;
+      }
+    }
   }
 }
 

@@ -18,7 +18,7 @@ function debounce(func, wait, immediate) {
 };
 
 const parallaxDownElements = document.querySelector('.parallaxDown');
-const parallaxDownElementTop = parallaxDownElements.getBoundingClientRect().top ;
+// const parallaxDownElementTop = parallaxDownElements.getBoundingClientRect().top;
 
 function offset(elt) {
   var rect = elt.getBoundingClientRect();
@@ -29,8 +29,8 @@ function offset(elt) {
     left: rect.left + bodyElt .scrollLeft
   }
 }
-console.log(parallaxDownElements.top);
-console.log(parallaxDownElements.left);
+var offsetElt = offset(parallaxDownElements);
+let parallaxDownElementTop = offsetElt.top;
 
 var myEfficientFn = debounce(function() {
   parallexDownFun(window.scrollY);
