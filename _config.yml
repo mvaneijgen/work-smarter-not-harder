@@ -24,7 +24,7 @@ author: Mitchel van Eijgen
 email: mvaneijgen@gmail.com
 phone: 06 38 63 27 35
 baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://worksmarternotharder.nl" # the base hostname & protocol for your site, e.g. http://example.com
+url: "http://worksmarternotharder.nl" # the base hostname & protocol for your site, e.g. http://example.com
 twitter_username: mvaneijgen
 github_username:  mvaneijgen
 
