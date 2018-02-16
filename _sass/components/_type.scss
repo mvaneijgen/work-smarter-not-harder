@@ -7,6 +7,7 @@ body {
   color: $brand-dark;
   font-size: 22px;
   line-height: 1.6em;
+  font-display: swap;
   -webkit-font-smoothing: antialiased;
 
 }
@@ -61,11 +62,6 @@ a {
     border-color: $brand-primary;
   }
 }
-.alloy-social {
-  a {
-    border-bottom: 0;
-  }
-}
 .alloy-large-counter {
   position: relative;
   // text-align: center;
@@ -99,11 +95,25 @@ a {
 .centered {
   text-align: center;
 }
+
+//------------------------------------------------------//
+// Superpowers
+//------------------------------------------------------//
 .item-superpowers {
   .emoji {
     @extend h1;
     margin-top: $base-spacing;
     margin-bottom: $base-spacing;
     display: block;
+    transition: transform;
+    transition-duration: .3s;
+    transition-timing-function: ease;
+
+  }
+  &:hover .emoji{
+    transform: translateY(-$base-spacing*2);
   }
 }
+//------------------------------------------------------//
+// END Superpowers
+//------------------------------------------------------//

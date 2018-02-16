@@ -1,0 +1,30 @@
+.alloy-footer {
+  font-size: .8em;
+
+  .profile {
+    display: block;
+    margin-top: 7.5px;
+    clip-path: polygon(51% 4%, 88% 21%, 100% 60%, 71% 93%, 23% 100%, 5% 61%, 9% 14%);
+    animation: polygons 14s alternate infinite;
+  }
+
+  @keyframes polygons {
+    25% {
+      clip-path: polygon(57% 8%, 88% 24%, 100% 83%, 63% 98%, 4% 93%, 0 41%, 8% 10%);
+    }
+    50% {
+      clip-path: polygon(63% 0, 100% 36%, 80% 74%, 86% 100%, 18% 82%, 0 64%, 34% 16%);
+    }
+    75% {
+      clip-path: polygon(33% 0, 100% 14%, 100% 59%, 72% 81%, 39% 100%, 0 83%, 19% 20%);
+    }
+  }
+  a {
+    border-bottom: 0;
+  }
+  .alloy-social {
+    > * {
+      display: block;
+    }
+  }
+}

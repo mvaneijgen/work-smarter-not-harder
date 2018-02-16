@@ -14,7 +14,7 @@ $brand-primary: #0ba;
 $brand-secondary: #e64;
 $brand-light: #fff;
 $brand-dark: #344;
-$brand-grey: #ccc;
+$brand-grey: #eee;
 
 
 $base-spacing: 15px;
@@ -157,5 +157,6 @@ $grid-breakpoints: (
   "components/form",
   "components/header",
   "components/layout",
+  "components/footer",
   "components/syntax-highlighting"
 ;

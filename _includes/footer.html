@@ -1,19 +1,28 @@
-<div class="container alloy-social">
+<div class="container alloy-footer">
   <div class="row">
 
-    <div class="col-md-4">
-      <img src="assets/images/{{site.author | slugify}}.jpg" alt="{{site.author}}">
+    <div class="col-md-3">
+      <img class="profile" src="assets/images/{{site.author | slugify}}.jpg" alt="{{site.author}}">
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3">
+      <h2>About</h2>
+      {{site.bio}}
+    </div>
+
+    <div class="col-md-3">
       <h2>Contact</h2>
       <a href="tel:{{site.phone | replace: ' ', ''}}">{{site.phone}}</a>
       <a href="mailto:{{site.email}}">{{site.email}}</a>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-md-3 alloy-social">
       <h2>Social</h2>
-      <a href="//twitter.com/{{site.twitter_username}}">@{{site.twitter_username}}</a>
+      <a href="//twitter.com/{{site.twitter_username}}">Twitter</a>
+      <a href="//github.com/{{site.github_username}}">Github</a>
+      <a href="//instagram.com/{{site.instagram_username}}">Instagram</a>
+      <a href="//facebook.com/{{site.facebook_username}}">Facebook</a>
+      <a href="//linkedin.com/in/{{site.linkedin_username}}">Linkedin</a>
     </div>
 
   </div>
