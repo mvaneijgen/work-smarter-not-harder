@@ -28,12 +28,20 @@
   </div>
 </div>
 
-<footer class="site-footer">
-<div class="container">
+<footer class="site-footer background--dark">
+<div class="container padding--none">
   <div class="row">
-    <div class="col-12">
-      {{site.github.project_title}}
+    <div class="col-md-4">
+      <span>{{site.title}} by {{ site.author }}</span>
     </div>
+    <div class="col-md-4">
+
+    <span>This site is build with <a href="https://jekyllrb.com" target="_blank">Jekyll</a> & <a href="https://pages.github.com">Github Pages</a></span>
+
+  </div>
+  <div class="col-md-4">
+{{ site.data['hash'] }}
+  </div>
   </div>
 </div>
 </footer>
