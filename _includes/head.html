@@ -27,7 +27,7 @@
   {% else %}
   <meta content="{{ site.title | escape }} | {{ site.tagline | escape }}" property="og:title">
   {% endif %}
-  <meta content="{{ "/assets/images/work-smarter-not-harder.jpg" | relative_url }}" property="og:type">
+  <meta content="{{ site.url }}{{ site.baseurl }}assets/images/work-smarter-not-harder.jpg" property="og:type">
   <meta content="Image" property="og:image">
   <meta content="{{ site.url }}{{ site.baseurl }}{{ page.url }}" property="og:url">
   <meta content="{{ site.title }}" property="og:site_name">
