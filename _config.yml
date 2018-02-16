@@ -32,6 +32,8 @@ instagram_username:  mvaneijgen
 facebook_username:  mvaneijgen
 linkedin_username:  mvaneijgen
 
+
+repository: mvaneijgen/work-smarter-not-harder
 # Build settings
 markdown: kramdown
 plugins:
