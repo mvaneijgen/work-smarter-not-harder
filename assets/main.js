@@ -74,8 +74,14 @@ alloySignup.addEventListener('focus', function( event ) {
 const emojis = document.querySelectorAll('.item-superpowers .emoji');
 
 emojis.forEach((emoji) => {
-  const emojiSwap = emojis.dataset.emojihover;
-  emoji.innercontext = emojiSwap;
+
+  emoji.addEventListener('mouseover', function( event ) {
+    let emojiSwap = this.dataset.emoji;
+    let emojiCurrent = this.innerText;
+    this.innerText = emojiSwap;
+    emojiSwap = this.dataset.emoji = emojiCurrent;
+  })
+
 })
 
 //------------------------------------------------------//

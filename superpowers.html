@@ -15,13 +15,12 @@ update:
   </div>
   <div class="row">
     {% for superpower in site.superpowers %}
-    <div class="col-md-4 col-6 centered item-superpowers">
-      <a href="{{ "/superpowers" | relative_url }}">
-        <span class="emoji" data-emojihover="{{superpower.emoji-hover}}">{{superpower.emoji}}</span>
+    <div class="col-md-4 col-6 centered item-superpowers rubberBand">
+
+        <span class="emoji" data-emoji="{{superpower.emoji-hover}}">{{superpower.emoji}}</span>
         <h3>{{ superpower.title }}</h3>
 
       </div>
-    </a>
     {% endfor %}
   </div>
 </div>

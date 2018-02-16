@@ -18,9 +18,9 @@ order: 50
     <div class="row">
       <!-- {% assign superpowers = site.superpowers | sort: 'order' %} -->
       {% for superpower in site.superpowers %}
-        <div class="col-md-4 col-6 centered item-superpowers">
+        <div class="col-md-4 col-6 centered item-superpowers rubberBand">
           <a href="{{ "/superpowers" | relative_url }}">
-          <span class="emoji">{{superpower.emoji}}</span>
+          <span class="emoji" data-emoji="{{superpower.emoji-hover}}">{{superpower.emoji}}</span>
           <h3>{{ superpower.title }}</h3>
 
         </div>
