@@ -38,6 +38,7 @@ repository: mvaneijgen/work-smarter-not-harder
 markdown: kramdown
 plugins:
   - jekyll-feed
+  - jekyll-git_metadata
 
 collections:
   sections:
