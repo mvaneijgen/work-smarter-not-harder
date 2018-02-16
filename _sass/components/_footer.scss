@@ -29,5 +29,10 @@
   }
 }
 .site-footer {
-  font-size: .8em;
+  font-size: .6em;
+
+  a {
+    border-bottom: 1px solid;
+    border-color: rgba($brand-light, .7);
+  }
 }
