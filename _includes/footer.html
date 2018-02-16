@@ -29,22 +29,16 @@
 </div>
 
 <footer class="site-footer background--dark">
-<div class="container padding--none">
-  <div class="row">
-    <div class="col-md-4">
-      <span>{{site.title}} by {{ site.author }}</span>
+  <div class="container padding--none">
+    <div class="row">
+      <div class="col-md-6">
+        <span>{{site.title}} by {{ site.author }}</span>
+      </div>
+      <div class="col-md-6 alloy-pull-right">
+        <span>Deze site is gebouwd met <a href="https://jekyllrb.com" target="_blank">Jekyll</a> & <a href="https://pages.github.com">Github Pages</a></span>
+      </div>
     </div>
-    <div class="col-md-4">
-
-    <span>This site is build with <a href="https://jekyllrb.com" target="_blank">Jekyll</a> & <a href="https://pages.github.com">Github Pages</a></span>
-
   </div>
-  <div class="col-md-4">
-<span>{{site.git.last_commit.short_sha}}</span>
-{{site.git.total_commits}}
-  </div>
-  </div>
-</div>
 </footer>
 
 <script src="{{ "/assets/main.js" | relative_url }}" charset="utf-8"></script>

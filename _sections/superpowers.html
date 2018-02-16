@@ -18,17 +18,18 @@ order: 50
     <div class="row">
       <!-- {% assign superpowers = site.superpowers | sort: 'order' %} -->
       {% for superpower in site.superpowers %}
-      <div class="col-md-4 col-6 centered item-superpowers">
-        <span class="emoji">{{superpower.emoji}}</span>
-        <h3>{{ superpower.title }}</h3>
-        <!-- {{ superpower.url }} -->
-      </div>
-      {% endfor %}
-    </div>
+        <div class="col-md-4 col-6 centered item-superpowers">
+          <a href="{{ "/superpowers" | relative_url }}">
+          <span class="emoji">{{superpower.emoji}}</span>
+          <h3>{{ superpower.title }}</h3>
 
+        </div>
+      </a>
+        {% endfor %}
+      </div>
     <div class="row">
       <div class="col-12 centered">
-        <a href="{{ "/" | relative_url }}superpowers" class="btn">Mis je een superpower?</a>
+        <a href="{{ "/" | relative_url }}superpowers#sign-me-up" class="btn">Mis je een superpower?</a>
       </div>
     </div>
   </div>

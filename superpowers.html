@@ -1,52 +1,48 @@
 ---
-layout: default
+layout: page
 title: Superpowers
-description:
+description: Veel van onderstaande "superpowers" heb ik (nog) geen ervaring mee, maar sommige wel. Van een paar mensen heb ik terug gekregen dat op deze manier na denken over wat in andere hun ogen vaak word gezien als een beperking, erg verademend was. Zo als ik al eerder aangaf heb ik zelf dyslexie en als ik kon kiezen zou ik met liefde slecht zijn schrijven tenalletijden inwisselen met creatief zijn, beelddenken en technisch inzicht hebben.
 excerpt:
+cta: Mis jij nog één?
 update:
 ---
 <div class="container" id="{{ page.title | slugify}}">
-<div class="row">
-  <div class="col-md-12">
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.description }}</p>
-  </div>
-</div>
-{% assign counter = 1 %}
-{% assign steps = site.steps | sort: 'order' %}
-{% for item in steps %}
-  {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
   <div class="row">
-
-    <div class="col-md-3 {% if thecycle == 'even' %} offset-md-1{% endif %} {% if thecycle == 'odd' %} push-md-8{% endif %}">
-      <h2>{{ item.title}}</h2>
-
-      <div class="alloy-large-counter">
-        <span>Step</span>
-        <span class="counter">#{{ counter }}</span>
-        {% assign counter=counter | plus:1 %}
-      </div>
-
+    <div class="col-md-10 offset-md-1">
+      <h1>{{ page.title }}</h1>
+      <p>{{ page.description }}</p>
     </div>
-
-    <div class="col-md-7 {% if thecycle == 'odd' %} pull-md-3 offset-md-1{% endif %}">
-      <p>{{ item.description }}</p>
-    </div>
-
   </div>
+  <div class="row">
+    {% for superpower in site.superpowers %}
+    <div class="col-md-4 col-6 centered item-superpowers">
+      <a href="{{ "/superpowers" | relative_url }}">
+        <span class="emoji">{{superpower.emoji}}</span>
+        <h3>{{ superpower.title }}</h3>
 
+      </div>
+    </a>
+    {% endfor %}
+  </div>
+</div>
 
+{% assign specificSection = site.sections | where:'title', 'Sign me up' %}
+{% for item in specificSection %}
+
+<section id="{{ item.title | slugify}}">
+  <div class="alloy-large">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="alloy-form-container">
+            <h3 class="alloy-fancy-header parallaxDown">
+              {% if page.cta %}{{page.cta}}{% else %}Sign me up{% endif %}
+            </h3>
+            {{ item.content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 {% endfor %}
-
-</div>
-
-<div class="container-full background--primary">
-  <div class="container">
-    <div class="row">
-      <div class="col-md-10 offset-md-1">
-        <h2>What will be next?</h2>
-        <p>Je zal je verbazen met wat voor inzichten jij zelf gaat komen nadat je bent bloot gesteld aan de wereld van het automatiseren. Daarom ben ik natuurlijk na onze gesprekken altijd nog beschikbaar om vragen te beantwoorden. Daarnaast ben ik natuurlijk in te huren om tools helemaal voor jouw werkzaamheden opmaat te ontwikkelen.</p>
-      </div>
-    </div>
-  </div>
-</div>

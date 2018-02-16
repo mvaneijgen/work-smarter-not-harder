@@ -4,34 +4,14 @@ description: bananaen
 layout: page
 order: 40
 ---
-<div class="alloy-large">
-
-  <div class="container">
-    <div class="row">
-
-      <div class="col-12">
-
-        <div class="alloy-form-container">
-
-        <h3 class="alloy-fancy-header parallaxDown">
-          Sign me up
-        </h3>
-        <form id="alloySignup" action="https://getsimpleform.com/messages?form_api_token=4b18204d7184c45ca6fb95f3580ef2d1" method="post">
-          <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
-          <input type='hidden' name='redirect_to' value='{{ "/" | relative_url }}thanks' />
-          <!-- all your input fields here.... -->
-          <span class="emoji">😀</span>
-          <div class="alloy-input-group">
-            <input id="alloyEmail" type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
-            <label for="alloyEmail">E-mailadres</label>
-          </div>
-          <input class="btn--small" type="submit" value="Send">
-        </form>
-
-        </div>
-
-      </div>
-
-    </div>
+<form id="alloySignup" action="https://getsimpleform.com/messages?form_api_token=4b18204d7184c45ca6fb95f3580ef2d1" method="post">
+  <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+  <input type='hidden' name='redirect_to' value='{{ "/" | relative_url }}thanks' />
+  <!-- all your input fields here.... -->
+  <span class="emoji">😀</span>
+  <div class="alloy-input-group">
+    <input id="alloyEmail" type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+    <label for="alloyEmail">E-mailadres</label>
   </div>
-</div>
+  <input class="btn--small" type="submit" value="Send">
+</form>

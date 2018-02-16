@@ -3,6 +3,7 @@ layout: default
 title: Wat krijg ik?
 description: Het doel is om jouw de power te geven om je tijd beter in te delen en je te focussen op de dingen waar jij goed in bent. Wij gaan samen kijken naar de manier hoe jij werkt om te zien of hier verbeteringen op aan te brengen zijn. Daarnaast heb ik wat algemene tips hoe je hebt best kunt om gaan met alle keuzestress, prestatiedruk en de snelle veranderende wereld. En als kers op de taart heb ik wat handige tools voor je die ik door de jaren heen verzameld heb, dit met wat hulp van automatisering kunnen je leven een kleins stukje makkelijker maken.
 excerpt: <strong>Wat is het doel?</strong> Jouw de power te geven om je te kunnen focussen waar jij goed in bent en de rest te automatiseren.
+cta: Ik ben overtuigd!
 update:
 ---
 <div class="container-full background--grey">
@@ -58,6 +59,19 @@ update:
 {% assign specificSection = site.sections | where:'title', 'Sign me up' %}
 {% for item in specificSection %}
 <section id="{{ item.title | slugify}}">
-  {{ item.content }}
+  <div class="alloy-large">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="alloy-form-container">
+            <h3 class="alloy-fancy-header parallaxDown">
+              {% if page.cta %}{{page.cta}}{% else %}Sign me up{% endif %}
+            </h3>
+            {{ item.content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 {% endfor %}
