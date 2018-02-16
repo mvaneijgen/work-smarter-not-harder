@@ -95,12 +95,17 @@ section {
 
   .alloy-fancy-header {
     @extend h1;
-    font-size: 6em;
-    opacity: .4;
+    font-size: 3em;
+    opacity: $base-opacity*2;
     white-space: nowrap;
     text-align: center;
     display: block;
     margin-bottom: 0;
+  }
+  @include media-breakpoint-up(md) {
+    .alloy-fancy-header {
+      font-size: 6em;
+    }
   }
 
 }

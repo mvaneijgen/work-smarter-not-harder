@@ -1,23 +1,35 @@
 ---
-title: superpowers
-description:
+title: Superpowers
+description: >
+  <p>Zelf ben ik dyslectisch, maar ik denk dat mijn dyslexie meer helpt dan wat het mij tegen zit. Middels: creatief zijn, beelddenken en technisch inzicht en ik zou met liefde slecht kunnen schrijven vervangen.</p>
+
+  <p>Persoonlijk denk ik dat dyslexie mij meer positiefs brengt dan mij tegen werkt, maar het is maar op welke manier je er naar kijkt.</p>
 layout: page
 order: 50
 ---
 <div class="container-full background--grey">
   <div class="container">
     <div class="row">
-      <div class="col-md-12">
-          <h2 class="extend-h1 centered">superpowers</h2>
+      <div class="col-md-10 offset-md-1">
+        <h2 class="extend-h1 centered">{{page.title}}</h2>
+        {{ page.description }}
       </div>
-      {% assign superpowers = site.superpowers | sort: 'order' %}
-      {% for superpower in superpowers %}
+    </div>
+    <div class="row">
+      <!-- {% assign superpowers = site.superpowers | sort: 'order' %} -->
+      {% for superpower in site.superpowers %}
       <div class="col-md-4 col-6 centered item-superpowers">
         <span class="emoji">{{superpower.emoji}}</span>
         <h3>{{ superpower.title }}</h3>
         <!-- {{ superpower.url }} -->
       </div>
       {% endfor %}
+    </div>
+
+    <div class="row">
+      <div class="col-12 centered">
+        <a href="{{ "/" | relative_url }}superpowers" class="btn">Mis je een superpower?</a>
+      </div>
     </div>
   </div>
 </div>

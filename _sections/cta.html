@@ -22,10 +22,10 @@ order: 40
           <!-- all your input fields here.... -->
           <span class="emoji">😀</span>
           <div class="alloy-input-group">
-            <input id="alloyEmail" type="text" name="email">
+            <input id="alloyEmail" type="text" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
             <label for="alloyEmail">E-mailadres</label>
           </div>
-          <input type="submit" value="Send">
+          <input class="btn--small" type="submit" value="Send">
         </form>
 
         </div>

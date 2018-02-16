@@ -5,13 +5,16 @@
         <div class="alloy-navbar">
           <a class="site-title animated fadeInLeft seventh" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
           <nav class="animated fadeInLeft eighth">
-            {% assign items = site.sections | sort: 'order' %}
-            {% for item in items %}
-            <a href="#{{ item.title | slugify }}" class="alloy-menu-item alloy-menu-item-{{ item.title | slugify }}">{{ item.title }}</a>
-            {% endfor %}
+
+            <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#intro" class="alloy-menu-item alloy-menu-item-intro alloy-anchor">Intro</a>
+            <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#sign-me-up" class="alloy-menu-item alloy-menu-item-sign-me-up alloy-anchor">Sign me up</a>
+            <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#how-it-works" class="alloy-menu-item alloy-menu-item-how-it-works alloy-anchor">Hoe werkt het?</a>
+            <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#about-me" class="alloy-menu-item alloy-menu-item-about-me alloy-anchor">About me</a>
+
           </nav>
         </div>
       </div>
     </div>
   </div>
+
 </header>

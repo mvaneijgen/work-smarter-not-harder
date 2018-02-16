@@ -5,27 +5,32 @@ description: Het doel is om jouw de power te geven om je tijd beter in te delen 
 excerpt: <strong>Wat is het doel?</strong> Jouw de power te geven om je te kunnen focussen waar jij goed in bent en de rest te automatiseren.
 update:
 ---
-<div class="container" id="{{ page.title | slugify}}">
-<div class="row">
-  <div class="col-md-12">
-    <h1>{{ page.title }}</h1>
-    <p>{{ page.description }}</p>
+<div class="container-full background--grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <h1>{{ page.title }}</h1>
+        <p>{{ page.description }}</p>
+      </div>
+    </div>
   </div>
 </div>
-{% assign counter = 1 %}
-{% assign steps = site.steps | sort: 'order' %}
-{% for item in steps %}
+<div class="container" id="{{ page.title | slugify}}">
+
+  {% assign counter = 1 %}
+  {% assign steps = site.steps | sort: 'order' %}
+  {% for item in steps %}
   {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
   <div class="row">
 
     <div class="col-md-3 {% if thecycle == 'even' %} offset-md-1{% endif %} {% if thecycle == 'odd' %} push-md-8{% endif %}">
       <h2>{{ item.title}}</h2>
 
-      <div class="alloy-large-counter">
+      <!-- <div class="alloy-large-counter">
         <span>Step</span>
         <span class="counter">#{{ counter }}</span>
         {% assign counter=counter | plus:1 %}
-      </div>
+      </div> -->
 
     </div>
 
@@ -36,7 +41,7 @@ update:
   </div>
 
 
-{% endfor %}
+  {% endfor %}
 
 </div>
 
@@ -50,3 +55,9 @@ update:
     </div>
   </div>
 </div>
+{% assign specificSection = site.sections | where:'title', 'Sign me up' %}
+{% for item in specificSection %}
+<section id="{{ item.title | slugify}}">
+  {{ item.content }}
+</section>
+{% endfor %}

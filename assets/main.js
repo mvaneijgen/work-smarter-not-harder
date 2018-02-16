@@ -44,7 +44,7 @@ window.addEventListener('scroll', myEfficientFn);
 function parallexDownFun(scrollpos) {
   var calculaedPosTop = parseInt((parallaxDownElementTop - scrollpos) / 5);
   parallaxDownElements.style.transform = 'translateY(-'+calculaedPosTop+'px)';
-  console.log(calculaedPosTop);
+  // console.log(calculaedPosTop);
 }
 document.addEventListener('DOMContentLoaded', function() {
     parallexDownFun(window.scrollY);
@@ -67,4 +67,57 @@ alloySignup.addEventListener('focus', function( event ) {
 }, true);
 //------------------------------------------------------//
 // END Form interactions
+//------------------------------------------------------//
+//------------------------------------------------------//
+// Smooth scrolling
+//------------------------------------------------------//
+document.addEventListener("DOMContentLoaded", () => {
+    scrollTo('.alloy-anchor', 500, 60);
+});
+
+function scrollTo (selector, duration, fps) {
+    let anchors = [].slice.call(document.querySelectorAll(selector));
+
+    for (let anchor of anchors) {
+        anchor.addEventListener('click', scrollAnimation);
+    }
+
+    function scrollAnimation(e) {
+        e.preventDefault();
+
+        let target = document.querySelector(this.getAttribute('href'));
+        let element = target, targetOffset = 0;
+
+        while (element && element != document.body) {
+            targetOffset += element.offsetTop;
+            element = element.offsetParent;
+        }
+
+        let currentOffset = window.pageYOffset || document.body.scrollTop;
+        let difference = Math.abs(currentOffset - targetOffset);
+
+        if (!difference) return;
+
+        let frames = parseInt(duration / 1000 * fps);
+        let tick = duration / frames;
+        let perFrame = difference / frames;
+        let direction = (targetOffset > currentOffset) ? 1 : -1;
+
+        let timer = setInterval(() => {
+            currentOffset = window.pageYOffset || document.body.scrollTop;
+            difference = Math.abs(currentOffset - targetOffset);
+
+            if (difference < perFrame) {
+                scrollBy(0, difference * direction);
+
+                clearInterval(timer);
+                return;
+            }
+
+            scrollBy(0, perFrame * direction);
+        }, tick);
+    }
+}
+//------------------------------------------------------//
+// END Smooth scrolling
 //------------------------------------------------------//

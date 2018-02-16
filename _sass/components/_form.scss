@@ -1,3 +1,6 @@
+input {
+  -webkit-appearance: none;
+}
 form {
   background-color: $brand-light;
   padding: $base-spacing;
@@ -65,13 +68,17 @@ input {
 }
 [type=submit],
 .btn {
+  font-size: 1em;
+  font-weight: 700;
   background-color: $brand-primary;
   color: $brand-light;
-  border-radius: $base-spacing/2;
+  border-radius: $base-spacing/3;
   padding: $base-spacing $base-spacing*2;
 
 }
-
+.btn--small {
+  font-size: .8em;
+}
 input {
   padding: $base-spacing 0;
   border-bottom: 2px solid transparent;
