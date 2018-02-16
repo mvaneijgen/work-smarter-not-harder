@@ -69,6 +69,19 @@ alloySignup.addEventListener('focus', function( event ) {
 // END Form interactions
 //------------------------------------------------------//
 //------------------------------------------------------//
+// Emoji swap
+//------------------------------------------------------//
+const emojis = document.querySelectorAll('.item-superpowers .emoji');
+
+emojis.forEach((emoji) => {
+  const emojiSwap = emojis.dataset.emojihover;
+  emoji.innercontext = emojiSwap;
+})
+
+//------------------------------------------------------//
+// END Emoji swap
+//------------------------------------------------------//
+//------------------------------------------------------//
 // Smooth scrolling
 //------------------------------------------------------//
 document.addEventListener("DOMContentLoaded", () => {

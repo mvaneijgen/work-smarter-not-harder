@@ -3,7 +3,7 @@ layout: page
 title: Superpowers
 description: Veel van onderstaande "superpowers" heb ik (nog) geen ervaring mee, maar sommige wel. Van een paar mensen heb ik terug gekregen dat op deze manier na denken over wat in andere hun ogen vaak word gezien als een beperking, erg verademend was. Zo als ik al eerder aangaf heb ik zelf dyslexie en als ik kon kiezen zou ik met liefde slecht zijn schrijven tenalletijden inwisselen met creatief zijn, beelddenken en technisch inzicht hebben.
 excerpt:
-cta: Mis jij nog één?
+cta: Welke heb jij?
 update:
 ---
 <div class="container" id="{{ page.title | slugify}}">
@@ -17,7 +17,7 @@ update:
     {% for superpower in site.superpowers %}
     <div class="col-md-4 col-6 centered item-superpowers">
       <a href="{{ "/superpowers" | relative_url }}">
-        <span class="emoji">{{superpower.emoji}}</span>
+        <span class="emoji" data-emojihover="{{superpower.emoji-hover}}">{{superpower.emoji}}</span>
         <h3>{{ superpower.title }}</h3>
 
       </div>
