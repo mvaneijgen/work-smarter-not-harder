@@ -1,0 +1,52 @@
+---
+layout: default
+title: Wat krijg ik?
+description: Het doel is om jouw de power te geven om je tijd beter in te delen en je te focussen op de dingen waar jij goed in bent. Wij gaan samen kijken naar de manier hoe jij werkt om te zien of hier verbeteringen op aan te brengen zijn. Daarnaast heb ik wat algemene tips hoe je hebt best kunt om gaan met alle keuzestress, prestatiedruk en de snelle veranderende wereld. En als kers op de taart heb ik wat handige tools voor je die ik door de jaren heen verzameld heb, dit met wat hulp van automatisering kunnen je leven een kleins stukje makkelijker maken.
+excerpt: <strong>Wat is het doel?</strong> Jouw de power te geven om je te kunnen focussen waar jij goed in bent en de rest te automatiseren.
+update:
+---
+<div class="container" id="{{ page.title | slugify}}">
+<div class="row">
+  <div class="col-md-12">
+    <h1>{{ page.title }}</h1>
+    <p>{{ page.description }}</p>
+  </div>
+</div>
+{% assign counter = 1 %}
+{% assign steps = site.steps | sort: 'order' %}
+{% for item in steps %}
+  {% capture thecycle %}{% cycle 'odd', 'even' %}{% endcapture %}
+  <div class="row">
+
+    <div class="col-md-3 {% if thecycle == 'even' %} offset-md-1{% endif %} {% if thecycle == 'odd' %} push-md-8{% endif %}">
+      <h2>{{ item.title}}</h2>
+
+      <div class="alloy-large-counter">
+        <span>Step</span>
+        <span class="counter">#{{ counter }}</span>
+        {% assign counter=counter | plus:1 %}
+      </div>
+
+    </div>
+
+    <div class="col-md-7 {% if thecycle == 'odd' %} pull-md-3 offset-md-1{% endif %}">
+      <p>{{ item.description }}</p>
+    </div>
+
+  </div>
+
+
+{% endfor %}
+
+</div>
+
+<div class="container-full background--primary">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <h2>What will be next?</h2>
+        <p>Je zal je verbazen met wat voor inzichten jij zelf gaat komen nadat je bent bloot gesteld aan de wereld van het automatiseren. Daarom ben ik natuurlijk na onze gesprekken altijd nog beschikbaar om vragen te beantwoorden. Daarnaast ben ik natuurlijk in te huren om tools helemaal voor jouw werkzaamheden opmaat te ontwikkelen.</p>
+      </div>
+    </div>
+  </div>
+</div>

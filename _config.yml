@@ -15,10 +15,10 @@
 # in the templates via {{ site.myvariable }}.
 title: Work smarter, not harder
 description: > # this means to ignore newlines until "baseurl:"
-  <p>Technologie is er er voor om voor je te werken, niet tegen je. Er zijn zo veel reden waardoor je gestrest kan raken in je leven, maar technologie zou er daar niet één van moeten zijn en als dit wel het geval is moet je het anders inzetten.</p>
+  <p>Technologie is er om voor je te werken. Er zijn zo veel reden waardoor je gestrest kan raken in je leven, maar technologie zou er daar niet één van moeten zijn en als dit wel het geval is moet je het anders inzetten.</p>
 
   <p>Ken je die pop-up die je op je telefoon krijgt wanneer je voor het eerst een app installeert “Mag deze app je push notificaties sturen”, zeg een s een keer nee. Met deze en nog een paar kleine aanpassingen in je workflow, kun je de tools die dagelijks je aandacht vragen inzetten om voor je te werken, zodat het werken en gebruiken voorwerp word e niet meer een stoorzender.</p>
-tagline: Laat technologie voor je werken, niet tegen je.
+tagline: Laat technologie niet tegen, maar voor  je werken.
 
 author: Mitchel van Eijgen
 email: mvaneijgen@gmail.com
@@ -34,8 +34,15 @@ plugins:
   - jekyll-feed
 
 collections:
-- sections
+  sections:
+    output: false
+  steps:
+    output: false
+  superpowers:
+    output: false
+    # permalink: /:name
 
+excerpt_separator: ""
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.

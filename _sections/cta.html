@@ -16,8 +16,10 @@ order: 40
         <h3 class="alloy-fancy-header parallaxDown">
           Sign me up
         </h3>
-
-        <form id="alloySignup" name="myForm" onsubmit="return validateForm()" method="post">
+        <form id="alloySignup" action="https://getsimpleform.com/messages?form_api_token=4b18204d7184c45ca6fb95f3580ef2d1" method="post">
+          <!-- the redirect_to is optional, the form will redirect to the referrer on submission -->
+          <input type='hidden' name='redirect_to' value='{{ "/" | relative_url }}/thanks' />
+          <!-- all your input fields here.... -->
           <span class="emoji">😀</span>
           <div class="alloy-input-group">
             <input id="alloyEmail" type="text" name="email">

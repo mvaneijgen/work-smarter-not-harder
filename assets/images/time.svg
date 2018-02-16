@@ -1,6 +1,7 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250">
   <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-    <circle cx="125" cy="125" r="80" stroke="#C5C5C5" stroke-width="14"/>
-    <polyline stroke="#E64" stroke-width="20" points="125 68.879 125.335 124.634 167.301 125"/>
+    <circle cx="125" cy="125" r="80" fill="#FFF" stroke="#D8D8D8" stroke-width="14"/>
+    <path stroke="#E64" stroke-width="20" d="M125.334624,124.6341 L167.300759,125"/>
+    <path stroke="#C5C5C5" stroke-width="20" d="M125,68.8790887 L125.334624,124.6341"/>
   </g>
 </svg>

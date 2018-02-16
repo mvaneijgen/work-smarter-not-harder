@@ -17,6 +17,9 @@ function debounce(func, wait, immediate) {
   };
 };
 
+//------------------------------------------------------//
+// Parallex
+//------------------------------------------------------//
 const parallaxDownElements = document.querySelector('.parallaxDown');
 // const parallaxDownElementTop = parallaxDownElements.getBoundingClientRect().top;
 
@@ -43,9 +46,25 @@ function parallexDownFun(scrollpos) {
   parallaxDownElements.style.transform = 'translateY(-'+calculaedPosTop+'px)';
   console.log(calculaedPosTop);
 }
+document.addEventListener('DOMContentLoaded', function() {
+    parallexDownFun(window.scrollY);
+}, false);
+//------------------------------------------------------//
+// END Parallex
+//------------------------------------------------------//
 
+//------------------------------------------------------//
+// Form interactions
+//------------------------------------------------------//
 // Replace emoji of form
 const alloySignup = document.querySelector('#alloySignup');
+
 alloySignup.addEventListener('focus', function( event ) {
+
   this.querySelector('.emoji').innerText = '😮';
+  this.querySelector('[for="alloyEmail"]').classList.add('alloy-focus');
+
 }, true);
+//------------------------------------------------------//
+// END Form interactions
+//------------------------------------------------------//

@@ -1,0 +1,9 @@
+---
+layout: page
+---
+{% assign items = site.sections | sort: 'order' %}
+{% for item in items %}
+<section id="{{ item.title | slugify}}">
+  {{ item.content }}
+</section>
+{% endfor %}

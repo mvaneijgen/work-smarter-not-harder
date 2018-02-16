@@ -1,0 +1,33 @@
+---
+title: How it works
+description: Het doel is om jouw de power te geven om je tijd beter in te delen en je te focussen op de dingen waar jij goed in bent. Wij gaan samen kijken naar de manier hoe jij werkt om te zien of hier verbeteringen op aan te brengen zijn. Daarnaast heb ik wat algemene tips hoe je hebt best kunt om gaan met alle keuzestress, prestatiedruk en de snelle veranderende wereld. En als kers op de taart heb ik wat handige tools voor je die ik door de jaren heen verzameld heb, dit met wat hulp van automatisering kunnen je leven een kleins stukje makkelijker maken.
+layout: page
+order: 50
+---
+<div class="container" id="{{ page.title | slugify}}">
+  <div class="row">
+
+    <div class="col-12 centered">
+      <h4>How it works</h4>
+    </div>
+
+    <div class="col-md-3 item-steps">
+      <h3>Wat is het doel?</h3>
+      <p>Jouw de power te geven om je te kunnen focussen waar jij goed in bent en de rest te automatiseren.</p>
+    </div>
+  <!-- </div> -->
+  <!-- <div class="row"> -->
+    {% assign counter = 1 %}
+    {% assign steps = site.steps | sort: 'order' %}
+    {% for item in steps %}
+
+    <div class="col-md-3 item-steps">
+
+      <h3><span>Step #{{ counter }}</span> {{ item.title}}</h3>
+      <p>{{ item.excerpt }}</p>
+    </div>
+    {% assign counter=counter | plus:1 %}
+    {% endfor %}
+  </div>
+
+</div>

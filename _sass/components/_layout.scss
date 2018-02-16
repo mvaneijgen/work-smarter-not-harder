@@ -70,13 +70,26 @@ section {
   // transform: skewY(-3deg);
   // }
 }
+.background--primary,
 .alloy-background--primary,
 .has-skew {
   h1, h2, h3, h4, h5, h6, p, span ul, ol {
     color: $brand-light;
   }
 }
-
+.background--primary {
+  background-color: $brand-primary;
+}
+.background--grey {
+  background-color: $brand-grey;
+}
+@include media-breakpoint-up(md) {
+  .background--primary,
+  .background--grey {
+    margin-top: $base-spacing*4;
+    margin-bottom: $base-spacing*4;
+  }
+}
 .alloy-form-container {
   position: relative;
 
@@ -103,7 +116,7 @@ section {
     min-height: 300px;
     border: 2px solid $brand-grey;
 
-    border-radius: $base-spacing;
+    border-radius: $base-spacing/2;
     margin-bottom: $base-spacing*2;
 
     img {
@@ -135,4 +148,17 @@ section {
 img {
   max-width: 100%;
   height: auto;
+}
+
+.item-superpowers {
+  margin-bottom: $base-spacing*2;
+}
+.item-steps {
+  margin-bottom: $base-spacing*2;
+}
+@include media-breakpoint-up(md) {
+  .item-steps {
+    font-size: .7em;
+    line-height: 1.6em;
+  }
 }

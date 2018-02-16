@@ -1,3 +1,24 @@
+<div class="container alloy-social">
+  <div class="row">
+
+    <div class="col-md-4">
+      <img src="assets/images/{{site.author | slugify}}.jpg" alt="{{site.author}}">
+    </div>
+
+    <div class="col-md-4">
+      <h2>Contact</h2>
+      <a href="tel:{{site.phone | replace: ' ', ''}}">{{site.phone}}</a>
+      <a href="mailto:{{site.email}}">{{site.email}}</a>
+    </div>
+
+    <div class="col-md-4">
+      <h2>Social</h2>
+      <a href="//twitter.com/{{site.twitter_username}}">@{{site.twitter_username}}</a>
+    </div>
+
+  </div>
+</div>
+
 <footer class="site-footer">
 <div class="container">
   <div class="row">

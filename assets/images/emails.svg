@@ -1,6 +1,13 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="250" height="250" viewBox="0 0 250 250">
-  <g fill="none" fill-rule="evenodd" stroke-linecap="round" stroke-linejoin="round">
-    <rect width="206" height="160" x="22" y="45" stroke="#C5C5C5" stroke-width="14" rx="2"/>
-    <polyline stroke="#E64" stroke-width="20" points="24.86 47.513 126.335 128.634 225.318 47.513"/>
+  <g fill="none" fill-rule="evenodd">
+    <circle cx="187" cy="104" r="49" fill="#D8D8D8"/>
+    <rect width="216" height="81" x="20" y="104" fill="#D8D8D8"/>
+    <rect width="121" height="98" x="66" y="55" fill="#D8D8D8"/>
+    <circle cx="69" cy="104" r="49" fill="#D8D8D8"/>
+    <circle cx="70" cy="106" r="42" fill="#FFF"/>
+    <rect width="84" height="70" x="28" y="106" fill="#FFF"/>
+    <rect width="36" height="31" x="130" y="37" fill="#E64"/>
+    <rect width="22" height="75" x="117" y="185" fill="#C5C5C5"/>
+    <rect width="8" height="81" x="125" y="37" fill="#C5C5C5"/>
   </g>
 </svg>

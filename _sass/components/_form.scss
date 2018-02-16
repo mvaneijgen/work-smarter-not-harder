@@ -5,7 +5,7 @@ form {
   margin-left: auto;
   margin-right: auto;
   box-shadow: 2px $base-spacing $base-spacing*2 0 rgba(#000, .1);
-  border-radius: $base-spacing;
+  border-radius: $base-spacing/2;
   position: relative;
 
   * {
@@ -14,7 +14,7 @@ form {
   [type=submit] {
     // position: absolute;
     float: right;
-    border-radius: $base-spacing/2;
+    border-radius: $base-spacing/3;
   }
   span {
     padding: $base-spacing $base-spacing 0;
@@ -39,11 +39,10 @@ form {
   }
 
   #alloyEmail {
-    width: 100%;
-
-    &:focus + [for="alloyEmail"] {
-      transform: translateY(-1.4rem) scale(.5);
-    }
+    width: 95%;
+  }
+  .alloy-focus {
+    transform: translateY(-1.4rem) scale(.5);
   }
 }
 form {
@@ -68,7 +67,7 @@ input {
 .btn {
   background-color: $brand-primary;
   color: $brand-light;
-  border-radius: $base-spacing;
+  border-radius: $base-spacing/2;
   padding: $base-spacing $base-spacing*2;
 
 }

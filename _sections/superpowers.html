@@ -1,0 +1,23 @@
+---
+title: superpowers
+description:
+layout: page
+order: 50
+---
+<div class="container-full background--grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12">
+          <h2 class="extend-h1 centered">superpowers</h2>
+      </div>
+      {% assign superpowers = site.superpowers | sort: 'order' %}
+      {% for superpower in superpowers %}
+      <div class="col-md-4 col-6 centered item-superpowers">
+        <span class="emoji">{{superpower.emoji}}</span>
+        <h3>{{ superpower.title }}</h3>
+        <!-- {{ superpower.url }} -->
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</div>
