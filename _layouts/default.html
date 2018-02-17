@@ -3,7 +3,7 @@
 
   {% include head.html %}
 
-  <body>
+  <body id="{% if page.title %}{{ page.title | slugify }}{% else %}layout-{{ page.layout | slugify }}{% endif %}">
     <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR5NDXP" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     {% include header.html %}

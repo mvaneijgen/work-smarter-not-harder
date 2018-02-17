@@ -1,9 +1,136 @@
 ---
 layout: page
+title: Work harder, not smarter!
 ---
-{% assign items = site.sections | sort: 'order' %}
-{% for item in items %}
+<section>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6">
+        <h1 class="animated fadeInUp">{{ page.title }}</h1>
+        <div class="animated fadeInUp second">
+          <p>Waarom slimmer werken als je ook harder kan werken!</p>
+          <a href="#intro" class="a-highlight alloy-anchor">Vertel me meer →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="intro">
+
+  <div class="has-skew">
+    <div class="alloy-background--alt animated skewIn seventh"></div>
+    <div class="container">
+      <div class="row animated fadeInUp third">
+        <div class="col-sm-2">
+          <h2>Intro</h2>
+
+        </div>
+        <div class="col-sm-10">
+          <p>Technologie is bedacht om tegen je te werken. Grote bedrijven hebben tools op een bepaalde manier ingericht en hebben natuurlijk het beste met jou voor, dus gebruik de tools zoals zei het bedacht hebben.</p>
+
+          <p>Als het je niet tegen zit dan doe je iets verkeerds en moet je meer apps instaleren die vaker om aandacht vragen!</p>
+
+          <p>“Mag deze app je push notificaties sturen”, ja en geef de app ook direct toegeang tot je foto's en contacten zodat het meer mensen kan benaderen.</p>
+          <span class="emoji">🎉</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+{% assign specificSection = site.sections | where:'title', 'Sign me up' %}
+{% for item in specificSection %}
 <section id="{{ item.title | slugify}}">
-  {{ item.content }}
+  <div class="alloy-large">
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+          <div class="alloy-form-container">
+            <h3 class="alloy-fancy-header parallaxDown">
+              {% if page.cta %}{{page.cta}}{% else %}Sign me up{% endif %}
+            </h3>
+            {{ item.content }}
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 {% endfor %}
+
+
+<div class="container">
+  <div class="row">
+
+    <div class="col-sm-6 col-md-4 alloy-cards">
+      <div class="inner">
+        <img src="{{ "/assets/images/notifications.svg" | relative_url }}" alt="Notifications icon">
+        <span>Notificaties</span>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 alloy-cards">
+      <div class="inner">
+        <img src="{{ "/assets/images/emails.svg" | relative_url }}" alt="Email icon">
+        <span>Emails</span>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 alloy-cards">
+      <div class="inner">
+        <img src="{{ "/assets/images/time.svg" | relative_url }}" alt="Tijd icon">
+        <span>Plannen</span>
+      </div>
+    </div>
+
+    <div class="col-sm-6 col-md-4 alloy-cards">
+      <div class="inner">
+        <img src="{{ "/assets/images/tasks.svg" | relative_url }}" alt="Todo icon">
+        <span>Todo's</span>
+      </div>
+    </div>
+
+    <div class="col-sm-12 col-md-8 alloy-cards">
+      <div class="inner">
+        <article class="">
+          <h3>Je telefoon moet jouw altijd om aandacht kunnen vragen!</h3>
+          <p>Dit zo dat jij je niet te veel op de buitenwereld hoeft te focussen. Want waarom praten met iemand als je hem of haar ook kunt app-en!</p>
+        </article>
+
+      </div>
+    </div>
+
+  </div>
+</div>
+
+
+<div class="container-full background--grey">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-10 offset-md-1">
+        <h2 class="extend-h1 centered">Handicaps!</h2>
+        <p class="centered">Je moet tenallentijden het nadeel van alles in zien. Zo ben je teminsten eerlijk tegen jezelf. Je moet bij elke tegenslag bij de pakken neer gaan zitten, het komt natuurlijk nooit meer goed.</p>
+      </div>
+    </div>
+    <div class="row">
+      <!-- {% assign superpowers = site.superpowers | sort: 'order' %} -->
+      {% for superpower in site.superpowers %}
+        <div class="col-md-4 col-6 centered item-superpowers animated flip">
+          <a href="{{ "/superpowers" | relative_url }}">
+          <span class="emoji" data-emoji="{{superpower.emoji-hover}}">{{superpower.emoji}}</span>
+          <h3>{{ superpower.title }}</h3>
+
+        </div>
+      </a>
+        {% endfor %}
+      </div>
+    <div class="row">
+      <div class="col-12 centered">
+        <a href="{{ "/" | relative_url }}superpowers#sign-me-up" class="btn">Mis je een handicaps?</a>
+      </div>
+    </div>
+  </div>
+</div>

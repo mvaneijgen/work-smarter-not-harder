@@ -57,6 +57,7 @@ section {
   }
   margin-bottom: $base-spacing * 10;
 }
+.alloy-background--alt,
 .alloy-background--primary {
   background-color: $brand-primary;
   height: 100%;
@@ -70,9 +71,13 @@ section {
   // transform: skewY(-3deg);
   // }
 }
+.alloy-background--alt {
+  background-color: $brand-secondary;
+}
 .background--primary,
 .background--dark,
 .alloy-background--primary,
+.alloy-background--alt,
 .has-skew {
   h1, h2, h3, h4, h5, h6, p, span, ul, ol, a {
     color: $brand-light;
@@ -169,5 +174,22 @@ img {
   .item-steps {
     font-size: .7em;
     line-height: 1.6em;
+  }
+}
+
+
+#work-harder-not-smarter {
+  .a-highlight {
+    color: $brand-secondary;
+    border-color: $brand-secondary;
+  }
+  [type=submit],
+  .btn {
+    background-color: $brand-secondary;
+  }
+  .alloy-cards:last-of-type .inner {
+    padding: 15px;
+    background-color: $brand-secondary;
+    border-color: $brand-secondary;
   }
 }
