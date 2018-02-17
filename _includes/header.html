@@ -6,10 +6,10 @@
           <a class="site-title animated fadeInLeft seventh" href="{{ "/" | relative_url }}">{{ site.title | escape }}</a>
           <nav class="animated fadeInLeft eighth">
 
-            <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#intro" class="alloy-menu-item alloy-menu-item-intro alloy-anchor">Intro</a>
-            <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#sign-me-up" class="alloy-menu-item alloy-menu-item-sign-me-up alloy-anchor">Sign me up</a>
-            <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#how-it-works" class="alloy-menu-item alloy-menu-item-how-it-works alloy-anchor">Hoe werkt het?</a>
-            <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#about-me" class="alloy-menu-item alloy-menu-item-about-me alloy-anchor">About me</a>
+            <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#intro" class="alloy-menu-item alloy-menu-item-intro {% if page.url == "/" %}alloy-anchor{% endif %}">Intro</a>
+            <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#sign-me-up" class="alloy-menu-item alloy-menu-item-sign-me-up {% if page.url == "/" %}alloy-anchor{% endif %}">Sign me up</a>
+            <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#how-it-works" class="alloy-menu-item alloy-menu-item-how-it-works {% if page.url == "/" %}alloy-anchor{% endif %}">Hoe werkt het?</a>
+            <a href="{% if page.url != "/" %}{{ "/" | relative_url }}{% endif %}#about-me" class="alloy-menu-item alloy-menu-item-about-me {% if page.url == "/" %}alloy-anchor{% endif %}">About me</a>
 
           </nav>
         </div>
