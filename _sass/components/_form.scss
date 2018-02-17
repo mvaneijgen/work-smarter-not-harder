@@ -14,7 +14,7 @@ form {
   * {
     vertical-align: top;
   }
-  [type=submit] {
+  [type="submit"] {
     // position: absolute;
     float: right;
     border-radius: $base-spacing/3;
@@ -73,7 +73,7 @@ input {
   border: 0;
 
 }
-[type=submit],
+[type="submit"],
 .btn {
   font-size: 1em;
   font-weight: 700;
