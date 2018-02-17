@@ -1,6 +1,19 @@
 <div class="container alloy-footer">
-  <div class="row">
 
+  <div class="row">
+    <div class="col-md-4">
+      <h4 class="large-title">{{site.title}}</h4>
+      <div class="">
+        <a href="{{ '/wat-krijg-ik#sign-me-up' | relative_url }}" class="btn btn--large">Sign me up →</a>
+
+      </div>
+    </div>
+    <div class="col-md-8 alloy-design">
+      <img src="{{ '/assets/images/design.svg' | relative_url }}" alt="Illustratie van een laptop, met veel notificaties">
+    </div>
+  </div>
+
+  <div class="row">
     <div class="col-md-3">
       <img class="profile" src="assets/images/{{site.author | slugify}}.jpg" alt="{{site.author}}">
     </div>

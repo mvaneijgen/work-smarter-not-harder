@@ -1,7 +1,9 @@
 ---
 layout: page
 title: Superpowers
-description: Veel van onderstaande "superpowers" heb ik (nog) geen ervaring mee, maar sommige wel. Van een paar mensen heb ik terug gekregen dat op deze manier na denken over wat in andere hun ogen vaak word gezien als een beperking, erg verademend was. Zo als ik al eerder aangaf heb ik zelf dyslexie en als ik kon kiezen zou ik met liefde slecht zijn schrijven tenalletijden inwisselen met creatief zijn, beelddenken en technisch inzicht hebben.
+description: >
+  <p>Veel van onderstaande "superpowers" heb ik (nog) geen ervaring mee, maar met een paar al wel. Van een paar mensen heb ik terug gekregen dat op deze manier na denken over wat in andere hun ogen vaak word gezien als een beperking, erg verademend is.</p>
+  <p>Zo als ik al eerder aangaf heb ik zelf dyslexie en als ik kon kiezen zou ik met liefde slecht zijn taal tenalletijden inwisselen met reatief zijn, beelddenken, filmisch geheugen, technisch inzicht en complexe situaties in één oog opslag kunnen overzien.</p>
 excerpt:
 cta: Welke heb jij?
 update:
@@ -15,7 +17,7 @@ update:
   </div>
   <div class="row">
     {% for superpower in site.superpowers %}
-    <div class="col-md-4 col-6 centered item-superpowers rubberBand">
+    <div class="col-md-4 col-6 centered item-superpowers animated flip">
 
         <span class="emoji" data-emoji="{{superpower.emoji-hover}}">{{superpower.emoji}}</span>
         <h3>{{ superpower.title }}</h3>
@@ -28,7 +30,7 @@ update:
 {% assign specificSection = site.sections | where:'title', 'Sign me up' %}
 {% for item in specificSection %}
 
-<section id="{{ item.title | slugify}}">
+<section id="{{ item.title | slugify}}" class="background--primary">
   <div class="alloy-large">
     <div class="container">
       <div class="row">

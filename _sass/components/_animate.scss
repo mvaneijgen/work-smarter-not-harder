@@ -86,87 +86,176 @@ $animatedDelayList: '.first', '.second', '.third', '.fourth', '.fifth', '.sixth'
   //   transition-timing-function: ease;
 }
 // END Parallax effect
-
-
-@-webkit-keyframes rubberBand {
+@-webkit-keyframes flip {
   from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 
   40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1);
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 
   50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1);
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
 
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1);
-  }
-
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
+  80% {
+    -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95);
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
 
   to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
 }
 
-@keyframes rubberBand {
+@keyframes flip {
   from {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
-  }
-
-  30% {
-    -webkit-transform: scale3d(1.25, 0.75, 1);
-    transform: scale3d(1.25, 0.75, 1);
+    -webkit-transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    transform: perspective(400px) rotate3d(0, 1, 0, -360deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 
   40% {
-    -webkit-transform: scale3d(0.75, 1.25, 1);
-    transform: scale3d(0.75, 1.25, 1);
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -190deg);
+    -webkit-animation-timing-function: ease-out;
+    animation-timing-function: ease-out;
   }
 
   50% {
-    -webkit-transform: scale3d(1.15, 0.85, 1);
-    transform: scale3d(1.15, 0.85, 1);
+    -webkit-transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    transform: perspective(400px) translate3d(0, 0, 150px) rotate3d(0, 1, 0, -170deg);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
 
-  65% {
-    -webkit-transform: scale3d(0.95, 1.05, 1);
-    transform: scale3d(0.95, 1.05, 1);
-  }
-
-  75% {
-    -webkit-transform: scale3d(1.05, 0.95, 1);
-    transform: scale3d(1.05, 0.95, 1);
+  80% {
+    -webkit-transform: perspective(400px) scale3d(0.95, 0.95, 0.95);
+    transform: perspective(400px) scale3d(0.95, 0.95, 0.95);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
 
   to {
-    -webkit-transform: scale3d(1, 1, 1);
-    transform: scale3d(1, 1, 1);
+    -webkit-transform: perspective(400px);
+    transform: perspective(400px);
+    -webkit-animation-timing-function: ease-in;
+    animation-timing-function: ease-in;
   }
 }
-
-.rubberBand:hover .emoji {
-  -webkit-animation-name: rubberBand;
-  animation-name: rubberBand;
-  -webkit-animation-duration: 1s;
-  animation-duration: 1s;
+.animated.flip:hover .emoji {
+  // -webkit-backface-visibility: visible;
+  // backface-visibility: visible;
+  -webkit-animation-name: flip;
+  animation-name: flip;
+  -webkit-animation-duration: .7s;
+  animation-duration: .7s;
   -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+//   animation-duration: 1.5s;
+//   animation-delay: 0s;
+//   animation-timing-function: ease-out; // find more fancy onece over at https://matthewlein.com/tools/ceaser ease, ease-in, ease-out, ease-in-out, linear, step-start, step-end;
+//   // animation-direction: alternate; // normal, reverse, alternate, alternate-reverse
+//   animation-iteration-count: 3; // infinite or number
+//   animation-fill-mode: forwards; // none, forwards, backwards, both
+//   animation-play-state: running; // running, paused
 }
+//
+// @-webkit-keyframes rubberBand {
+//   from {
+//     -webkit-transform: scale3d(1, 1, 1);
+//     transform: scale3d(1, 1, 1);
+//   }
+//
+//   30% {
+//     -webkit-transform: scale3d(1.25, 0.75, 1);
+//     transform: scale3d(1.25, 0.75, 1);
+//   }
+//
+//   40% {
+//     -webkit-transform: scale3d(0.75, 1.25, 1);
+//     transform: scale3d(0.75, 1.25, 1);
+//   }
+//
+//   50% {
+//     -webkit-transform: scale3d(1.15, 0.85, 1);
+//     transform: scale3d(1.15, 0.85, 1);
+//   }
+//
+//   65% {
+//     -webkit-transform: scale3d(0.95, 1.05, 1);
+//     transform: scale3d(0.95, 1.05, 1);
+//   }
+//
+//   75% {
+//     -webkit-transform: scale3d(1.05, 0.95, 1);
+//     transform: scale3d(1.05, 0.95, 1);
+//   }
+//
+//   to {
+//     -webkit-transform: scale3d(1, 1, 1);
+//     transform: scale3d(1, 1, 1);
+//   }
+// }
+//
+// @keyframes rubberBand {
+//   from {
+//     -webkit-transform: scale3d(1, 1, 1);
+//     transform: scale3d(1, 1, 1);
+//   }
+//
+//   30% {
+//     -webkit-transform: scale3d(1.25, 0.75, 1);
+//     transform: scale3d(1.25, 0.75, 1);
+//   }
+//
+//   40% {
+//     -webkit-transform: scale3d(0.75, 1.25, 1);
+//     transform: scale3d(0.75, 1.25, 1);
+//   }
+//
+//   50% {
+//     -webkit-transform: scale3d(1.15, 0.85, 1);
+//     transform: scale3d(1.15, 0.85, 1);
+//   }
+//
+//   65% {
+//     -webkit-transform: scale3d(0.95, 1.05, 1);
+//     transform: scale3d(0.95, 1.05, 1);
+//   }
+//
+//   75% {
+//     -webkit-transform: scale3d(1.05, 0.95, 1);
+//     transform: scale3d(1.05, 0.95, 1);
+//   }
+//
+//   to {
+//     -webkit-transform: scale3d(1, 1, 1);
+//     transform: scale3d(1, 1, 1);
+//   }
+// }
+//
+// .rubberBand:hover .emoji {
+//   -webkit-animation-name: rubberBand;
+//   animation-name: rubberBand;
+//   -webkit-animation-duration: 1s;
+//   animation-duration: 1s;
+//   -webkit-animation-fill-mode: both;
+//   animation-fill-mode: both;
+// }

@@ -47,7 +47,7 @@ function parallexDownFun(scrollpos) {
   // console.log(calculaedPosTop);
 }
 document.addEventListener('DOMContentLoaded', function() {
-    parallexDownFun(window.scrollY);
+  parallexDownFun(window.scrollY);
 }, false);
 //------------------------------------------------------//
 // END Parallex
@@ -71,19 +71,24 @@ alloySignup.addEventListener('focus', function( event ) {
 //------------------------------------------------------//
 // Emoji swap
 //------------------------------------------------------//
-const emojis = document.querySelectorAll('.item-superpowers .emoji');
+const superpowers = document.querySelectorAll('.item-superpowers');
 
-emojis.forEach((emoji) => {
+superpowers.forEach((superpower) => {
 
-  emoji.addEventListener('mouseover', function( event ) {
-    let emojiSwap = this.dataset.emoji;
-    let emojiCurrent = this.innerText;
-    this.innerText = emojiSwap;
-    emojiSwap = this.dataset.emoji = emojiCurrent;
+  superpower.addEventListener('mouseenter', function( event ) {
+    const emoji = superpower.querySelector('.emoji');
+
+    let emojiSwap = emoji.dataset.emoji;
+    let emojiCurrent = emoji.innerText;
+
+    setTimeout(function() {
+      emoji.innerText = emojiSwap;
+      emoji.dataset.emoji = emojiCurrent;
+    }, 450);
+
   })
 
 })
-
 //------------------------------------------------------//
 // END Emoji swap
 //------------------------------------------------------//
@@ -91,51 +96,51 @@ emojis.forEach((emoji) => {
 // Smooth scrolling
 //------------------------------------------------------//
 document.addEventListener("DOMContentLoaded", () => {
-    scrollTo('.alloy-anchor', 500, 60);
+  scrollTo('.alloy-anchor', 500, 60);
 });
 
 function scrollTo (selector, duration, fps) {
-    let anchors = [].slice.call(document.querySelectorAll(selector));
+  let anchors = [].slice.call(document.querySelectorAll(selector));
 
-    for (let anchor of anchors) {
-        anchor.addEventListener('click', scrollAnimation);
+  for (let anchor of anchors) {
+    anchor.addEventListener('click', scrollAnimation);
+  }
+
+  function scrollAnimation(e) {
+    e.preventDefault();
+
+    let target = document.querySelector(this.getAttribute('href'));
+    let element = target, targetOffset = 0;
+
+    while (element && element != document.body) {
+      targetOffset += element.offsetTop;
+      element = element.offsetParent;
     }
 
-    function scrollAnimation(e) {
-        e.preventDefault();
+    let currentOffset = window.pageYOffset || document.body.scrollTop;
+    let difference = Math.abs(currentOffset - targetOffset);
 
-        let target = document.querySelector(this.getAttribute('href'));
-        let element = target, targetOffset = 0;
+    if (!difference) return;
 
-        while (element && element != document.body) {
-            targetOffset += element.offsetTop;
-            element = element.offsetParent;
-        }
+    let frames = parseInt(duration / 1000 * fps);
+    let tick = duration / frames;
+    let perFrame = difference / frames;
+    let direction = (targetOffset > currentOffset) ? 1 : -1;
 
-        let currentOffset = window.pageYOffset || document.body.scrollTop;
-        let difference = Math.abs(currentOffset - targetOffset);
+    let timer = setInterval(() => {
+      currentOffset = window.pageYOffset || document.body.scrollTop;
+      difference = Math.abs(currentOffset - targetOffset);
 
-        if (!difference) return;
+      if (difference < perFrame) {
+        scrollBy(0, difference * direction);
 
-        let frames = parseInt(duration / 1000 * fps);
-        let tick = duration / frames;
-        let perFrame = difference / frames;
-        let direction = (targetOffset > currentOffset) ? 1 : -1;
+        clearInterval(timer);
+        return;
+      }
 
-        let timer = setInterval(() => {
-            currentOffset = window.pageYOffset || document.body.scrollTop;
-            difference = Math.abs(currentOffset - targetOffset);
-
-            if (difference < perFrame) {
-                scrollBy(0, difference * direction);
-
-                clearInterval(timer);
-                return;
-            }
-
-            scrollBy(0, perFrame * direction);
-        }, tick);
-    }
+      scrollBy(0, perFrame * direction);
+    }, tick);
+  }
 }
 //------------------------------------------------------//
 // END Smooth scrolling

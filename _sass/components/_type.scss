@@ -25,9 +25,14 @@ h1 {
 }
 
 h2 {
-  margin-top: $base-spacing/2;
+  margin-top: $base-spacing*2;
   border-top: 6px solid;
   padding-top: $base-spacing;
+}
+@include media-breakpoint-up(md) {
+ h2 {
+  margin-top: $base-spacing/2
+  }
 }
 .extend-h1 {
   @extend h1;
@@ -46,6 +51,13 @@ h3 {
 h4 {
   font-size: 2em;
   opacity: $base-opacity*2;
+
+  &.large-title {
+    margin-top: $base-spacing*6;
+    font-size: 2.5em;
+    line-height: 1.2em;
+    opacity: 1;
+  }
 }
 a {
   text-decoration: none;
@@ -62,6 +74,9 @@ a {
     color: $brand-primary;
     border-color: $brand-primary;
   }
+}
+span.emoji {
+font-size: 42px;
 }
 .alloy-large-counter {
   position: relative;

@@ -1,7 +1,7 @@
 ---
 title: Superpowers
 description: >
-  <p>Zelf ben ik dyslectisch, maar ik denk dat mijn dyslexie meer helpt dan wat het mij tegen zit. Middels: creatief zijn, beelddenken en technisch inzicht en ik zou met liefde slecht kunnen schrijven vervangen.</p>
+  <p>Zelf ben ik dyslectisch, maar wat ik terug krijg voor slecht zijn in lezen en schrijven is: creatief zijn, beelddenken, filmisch geheugen, technisch inzicht en complexe situaties in één oog opslag kunnen overzien, deze eigenschappen zou ik tenalletijden met liefde inruilen voor slecht zijn in taal.</p>
 
   <p>Persoonlijk denk ik dat dyslexie mij meer positiefs brengt dan mij tegen werkt, maar het is maar op welke manier je er naar kijkt.</p>
 layout: page
@@ -18,7 +18,7 @@ order: 50
     <div class="row">
       <!-- {% assign superpowers = site.superpowers | sort: 'order' %} -->
       {% for superpower in site.superpowers %}
-        <div class="col-md-4 col-6 centered item-superpowers rubberBand">
+        <div class="col-md-4 col-6 centered item-superpowers animated flip">
           <a href="{{ "/superpowers" | relative_url }}">
           <span class="emoji" data-emoji="{{superpower.emoji-hover}}">{{superpower.emoji}}</span>
           <h3>{{ superpower.title }}</h3>
