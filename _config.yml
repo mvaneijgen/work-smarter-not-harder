@@ -15,14 +15,14 @@
 # in the templates via {{ site.myvariable }}.
 title: Work smarter, not harder
 description: > # this means to ignore newlines until "baseurl:"
-  <p>Technologie is er om voor jouw te werken. Er zijn zo veel redenen waardoor je gestrest kan raken, maar technologie zou daar niet bij moeten zijn horen.</p>
+  <p>Technologie is er om voor jou te werken. Er zijn zo veel redenen waardoor je gestresst kan raken, maar technologie zou daar niet bij moeten zijn horen.</p>
 
-  <p>Wanneer dit wel het geval is moet je de tools die je gebruikt op een andere manier inzetten.</p>
+  <p>Wanneer dit wel het geval is, moet je de tools die je gebruikt op een andere manier inzetten.</p>
 
-  <p>“Mag deze app je push notificaties sturen”, dit zijn van die kleine vragen waar de meeste mensen zonder na te denken ja op zeggen, maar deze vraag moet eigenlijk zijn “Mag deze app je op elk moment van de dag storen?”.</p>
+  <p>“Mag deze app je push notificaties sturen?” Dit zijn van die kleine vragen waar de meeste mensen zonder na te denken ‘ja’ op zeggen, maar deze vraag moet eigenlijk zijn: “Mag deze app je op elk moment van de dag storen?”.</p>
 
-  <p>Op deze manier nadenken over welke apps jouw aandacht mogen vragen is waar ik mensen bekent mee wil maken. Een paar kleine aanpassingen in je werkwijze en onderdelen van je werk automatiseren kunnen er voor zorgen dat technologie niet tegen je werken, maar voor je!</p>
-tagline: Laat technologie niet tegen, maar voor  je werken.
+  <p>Op deze manier nadenken over welke apps jouw aandacht mogen vragen is waar ik mensen bekent mee wil maken. Met een paar kleine aanpassingen in je werkwijze en een aantal onderdelen van je werk te automatiseren gaan we er voor zorgen dat technologie niet tégen je werkt, maar vóór je!</p>
+tagline: Laat technologie niet tégen, maar vóór je werken.
 
 author: Mitchel van Eijgen
 bio: Grafisch ontwerper met een liefde voor technologie.
