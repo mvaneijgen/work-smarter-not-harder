@@ -16,7 +16,8 @@ order: 50
     </div>
     <div class="row">
       <!-- {% assign superpowers = site.superpowers | sort: 'order' %} -->
-      {% for superpower in site.superpowers %}
+      {% assign featured = site.superpowers | where:'featured', 'true' %}
+    {% for superpower in featured %}
         <div class="col-md-4 col-6 centered item-superpowers animated flip">
           <a href="{{ "/superpowers" | relative_url }}">
           <span class="emoji" data-emoji="{{superpower.emoji-hover}}">{{superpower.emoji}}</span>
@@ -28,7 +29,7 @@ order: 50
       </div>
     <div class="row">
       <div class="col-12 centered">
-        <a href="{{ "/" | relative_url }}superpowers#sign-me-up" class="btn">Mis je een superpower?</a>
+        <a href="{{ "/" | relative_url }}superpowers#sign-me-up" class="btn">Welke superpower heb jij?</a>
       </div>
     </div>
   </div>

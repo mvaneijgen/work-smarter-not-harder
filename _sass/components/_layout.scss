@@ -1,27 +1,35 @@
 body {
   margin: 0;
 }
+
 section {
   position: relative;
 }
+
 @include media-breakpoint-up(md) {
   section {
 
     &.alloy-large,
     &:first-of-type {
-      min-height: 50vh;
+      height: 50vh;
+      min-height: 400px;
+      max-height: 800px;
       display: flex;
       justify-content: center;
       align-items: center;
     }
   }
 }
+
 .alloy-large {
-  min-height: 50vh;
+  height: 50vh;
+  min-height: 400px;
+  max-height: 800px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
+
 .container {
   // max-width: 1110px;
   // margin-left: auto;
@@ -30,33 +38,56 @@ section {
   position: relative;
   z-index: 2000;
 }
+
 .container {
   padding-top: $base-spacing * 4;
-  > .row {
+
+  >.row {
     padding-bottom: $base-spacing * 4;
   }
 }
+
 .padding--none {
   padding-top: 0;
-  > .row {
+
+  >.row {
     padding-bottom: 0;
   }
 }
+
 .padding--small {
   padding-top: $base-spacing * 2;
-  > .row {
+
+  >.row {
     padding-bottom: $base-spacing * 2;
   }
 }
+
 .has-skew {
   .container {
-    padding-top: $base-spacing * 10;
-    > .row {
-      padding-bottom: $base-spacing * 10;
+    padding-top: $base-spacing * 5;
+
+    >.row {
+      padding-bottom: $base-spacing * 5;
     }
   }
-  margin-bottom: $base-spacing * 10;
+
+  margin-bottom: $base-spacing * 5;
+
+  @include media-breakpoint-up(lg) {
+    .container {
+      padding-top: $base-spacing * 10;
+
+      >.row {
+        padding-bottom: $base-spacing * 10;
+      }
+    }
+
+    margin-bottom: $base-spacing * 10;
+  }
+
 }
+
 .alloy-background--alt,
 .alloy-background--primary {
   background-color: $brand-primary;
@@ -71,50 +102,68 @@ section {
   // transform: skewY(-3deg);
   // }
 }
+
 .alloy-background--alt {
   background-color: $brand-secondary;
 }
+
 .background--primary,
 .background--dark,
 .alloy-background--primary,
 .alloy-background--alt,
 .has-skew {
-  h1, h2, h3, h4, h5, h6, p, span, ul, ol, a {
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  p,
+  span,
+  ul,
+  ol,
+  a {
     color: $brand-light;
   }
 }
+
 .background--primary {
   background-color: $brand-primary;
 }
+
 .background--grey {
   background-color: $brand-grey;
 }
+
 .background--dark {
   background-color: $brand-dark;
 }
+
 @include media-breakpoint-up(md) {
+
   .background--primary,
   .background--grey {
     margin-top: $base-spacing*4;
     margin-bottom: $base-spacing*4;
   }
 }
+
 .alloy-form-container {
   position: relative;
 
   .alloy-fancy-header {
     @extend h1;
-    font-size: 2em;
+    font-size: 13vmin;
     opacity: $base-opacity*2;
     white-space: nowrap;
     text-align: center;
     display: block;
     margin-bottom: 0;
   }
+
   @include media-breakpoint-up(md) {
-    .alloy-fancy-header {
-      font-size: 6em;
-    }
+    .alloy-fancy-header {}
   }
 
 }
@@ -137,10 +186,12 @@ section {
       // display: block;
       max-width: 200px;
     }
+
     span {
       display: block;
     }
   }
+
   &:last-of-type {
     .inner {
       padding: $base-spacing;
@@ -150,6 +201,7 @@ section {
       text-align: left !important;
     }
   }
+
   @include media-breakpoint-up(md) {
     &:last-of-type {
       .inner {
@@ -167,9 +219,11 @@ img {
 .item-superpowers {
   margin-bottom: $base-spacing*2;
 }
+
 .item-steps {
   margin-bottom: $base-spacing*2;
 }
+
 @include media-breakpoint-up(md) {
   .item-steps {
     font-size: .7em;
@@ -183,10 +237,12 @@ img {
     color: $brand-secondary;
     border-color: $brand-secondary;
   }
+
   [type="submit"],
   .btn {
     background-color: $brand-secondary;
   }
+
   .alloy-cards:last-of-type .inner {
     padding: 15px;
     background-color: $brand-secondary;

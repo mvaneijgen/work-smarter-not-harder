@@ -16,6 +16,7 @@ update:
     </div>
   </div>
   <div class="row">
+    
     {% for superpower in site.superpowers %}
     <div class="col-md-4 col-6 centered item-superpowers animated flip">
 
@@ -32,17 +33,13 @@ update:
 
 <section id="{{ item.title | slugify}}" class="background--primary">
   <div class="alloy-large">
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
+
           <div class="alloy-form-container">
             <h3 class="alloy-fancy-header parallaxDown">
               {% if page.cta %}{{page.cta}}{% else %}Sign me up{% endif %}
             </h3>
             {{ item.content }}
-          </div>
-        </div>
-      </div>
+
     </div>
   </div>
 </section>

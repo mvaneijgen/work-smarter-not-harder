@@ -2,14 +2,11 @@
 
   <div class="row">
     <div class="col-md-4">
-      <h4 class="large-title">{{site.title}}</h4>
-      <div class="">
+      <h4 class="large-title">Laat technologie niet tegen je werken, maar voor je!</h4>
         <a href="{{ '/wat-krijg-ik#sign-me-up' | relative_url }}" class="btn btn--large">Sign me up →</a>
-
-      </div>
     </div>
     <div class="col-md-8 alloy-design">
-      <img src="{{ '/assets/images/design.svg' | relative_url }}" alt="Illustratie van een laptop, met veel notificaties">
+      {% include laptop.html %}
     </div>
   </div>
 
@@ -40,6 +37,7 @@
 
   </div>
 </div>
+
 
 <footer class="site-footer background--dark">
   <div class="container padding--none">
