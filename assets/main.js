@@ -270,7 +270,7 @@ document.querySelectorAll("#laptopSVG").forEach(function (container) {
   tlMain.add(() => ringing.play(), "<")
   // Notification loops
   tlMain.add(() => notificationTop.play(), "+=.5")
-  tlMain.add(() => notificationBottom.play(), "+=.5")
+  tlMain.add(() => notificationBottom.play(), "+=.75")
   tlMain.add(() => labelPop.play(), "+=.2")
   // Clock loop
   tlMain.add(fadeInBottom(q('#clock')), "+=.2")
@@ -281,7 +281,6 @@ document.querySelectorAll("#laptopSVG").forEach(function (container) {
     clickable.addEventListener('click', () => {
       // Get clickable item timline and pause it
       const animation = clickable.dataset.animation;
-      console.warn(animation);
       eval(animation).pause();
       // Animate out the clickable item 
       gsap.to(clickable, {
