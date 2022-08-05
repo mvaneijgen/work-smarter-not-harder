@@ -9,8 +9,7 @@ section {
 @include media-breakpoint-up(md) {
   section {
 
-    &.alloy-large,
-    &:first-of-type {
+    &.alloy-large {
       height: 50vh;
       min-height: 400px;
       max-height: 800px;

@@ -14,9 +14,37 @@ html {
   }
 }
 
-.intro {
-  max-width: 600px;
-  margin-bottom: 60px;
+#home {
+  margin-bottom: 40px;
+
+  .inner {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+
+    @include media-breakpoint-up(lg) {
+      flex-direction: row;
+    }
+  }
+
+  .intro {
+    padding-top: 60px;
+    padding-bottom: 60px;
+  }
+
+  h1 {
+    hyphens: none;
+    font-size: 2.5em;
+  }
+
+  svg {
+
+    @include media-breakpoint-down(md) {
+      order: -1;
+    }
+
+    width: 100%;
+  }
 }
 
 .container {

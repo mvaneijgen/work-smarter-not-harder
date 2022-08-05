@@ -143,7 +143,6 @@ document.querySelectorAll("#laptopSVG").forEach(function (container) {
     ease: "back.in(1.1)",
   });
 
-
   const notificationBottom = gsap.timeline({
     paused: true,
     repeat: -1,
@@ -163,8 +162,6 @@ document.querySelectorAll("#laptopSVG").forEach(function (container) {
     autoAlpha: 0,
     ease: "back.in(1.1)",
   });
-
-
 
   const message = gsap.timeline({
     paused: true,
@@ -277,6 +274,78 @@ document.querySelectorAll("#laptopSVG").forEach(function (container) {
   tlMain.add(() => annoyingClock.play(), "<")
 
   // Interactive elments 
+  let clicks = 0;
+  let disturbClicked = false;
+  const disturbLoop = gsap.from(q('#disturb'), {
+    duration: baseAnimate * 3,
+    transformOrigin: "left bottom",
+    rotate: 10,
+    repeat: -1,
+    delay: 2,
+    immediateRender: false,
+    repeatDelay: 2,
+    ease: "elastic.out(2, 0.3)",
+  })
+  function disturb() {
+    gsap.set(q('#disturb'), { autoAlpha: 1 })
+    gsap.from(q('#disturb'), {
+      duration: baseAnimate * 3,
+      transformOrigin: "left bottom",
+      opacity: 0,
+      rotate: 30,
+      ease: "elastic.out(2, 0.3)",
+      onComplete: () => {
+        disturbLoop
+      }
+    })
+  }
+  container.querySelectorAll("#disturb").forEach((clickable) => {
+    clickable.addEventListener('click', () => {
+      disturbClicked = !disturbClicked;
+      if (disturbClicked) {
+        gsap.to(q('.clickable'), {
+          autoAlpha: 0
+        })
+        gsap.set(q('.clickable'), { scale: 0 })
+        gsap.to(q('#laptop__screen__screen'), { fill: "#344" })
+        gsap.fromTo(q('#text > *'), {
+          autoAlpha: 0,
+          y: 40,
+          stagger: 0.4,
+        }, {
+          autoAlpha: 1,
+          y: 0,
+        })
+
+        disturbLoop.kill();
+        annoyingClock.kill();
+        labelPop.kill();
+        notificationTop.kill();
+        notificationBottom.kill();
+        ringing.kill();
+        mail.kill();
+        message.kill();
+      } else {
+        gsap.to(q('#laptop__screen__screen'), { fill: "#fff" })
+        gsap.to(q('#text > *'), {
+          autoAlpha: 0,
+          y: 40,
+          // stagger: 0.4,
+        })
+        gsap.set(q('.clickable'), { scale: 1, autoAlpha: 1 })
+        disturbLoop.restart();
+        annoyingClock.restart();
+        labelPop.restart();
+        notificationTop.restart();
+        notificationBottom.restart();
+        ringing.restart();
+        mail.restart();
+        message.restart();
+      }
+
+    })
+  })
+
   container.querySelectorAll(".clickable").forEach((clickable) => {
     clickable.addEventListener('click', () => {
       // Get clickable item timline and pause it
@@ -296,6 +365,11 @@ document.querySelectorAll("#laptopSVG").forEach(function (container) {
           gsap.delayedCall(2, () => eval(animation).restart());
         }
       });
+      // Track how many times items have been clicked
+      clicks++;
+      if (clicks === 3) {
+        disturb()
+      }
     })
   });
 });
